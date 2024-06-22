@@ -1,4 +1,4 @@
-import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:awesome_dialog/awesome_dialog.dart' as dialog;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -56,7 +56,7 @@ addDataEmail(String name, String email) async {
     'is_online': false,
     'last_active': time,
     'push_token': '',
-    'isUser':false
+    'isUser': false
   });
 }
 
@@ -109,20 +109,20 @@ login(
     }
   } on FirebaseAuthException catch (e) {
     if (e.code == 'user-not-found') {
-      AwesomeDialog(
+      dialog.AwesomeDialog(
         context: context,
-        dialogType: DialogType.INFO,
-        animType: AnimType.BOTTOMSLIDE,
+        dialogType:  dialog.DialogType.info,
+        animType:  dialog.AnimType.bottomSlide,
         title: 'Attend  !',
         desc: 'This Account IsNot Exist',
         btnCancelOnPress: () {},
         btnOkOnPress: () {},
       ).show();
     } else if (e.code == 'wrong-password') {
-      AwesomeDialog(
+      dialog.AwesomeDialog(
         context: context,
-        dialogType: DialogType.INFO,
-        animType: AnimType.BOTTOMSLIDE,
+        dialogType:  dialog.DialogType.info,
+        animType:  dialog.AnimType.bottomSlide,
         title: 'Attend  !',
         desc: 'The password is Wrong',
         btnOkOnPress: () {},
@@ -145,20 +145,20 @@ Future login1(String email, pass, {context}) async {
     }
   } on FirebaseAuthException catch (e) {
     if (e.code == 'user-not-found') {
-      AwesomeDialog(
+      dialog.AwesomeDialog(
         context: context,
-        dialogType: DialogType.INFO,
-        animType: AnimType.BOTTOMSLIDE,
+        dialogType:  dialog.DialogType.info,
+        animType:  dialog.AnimType.bottomSlide,
         title: 'Attend  !',
         desc: 'This Account IsNot Exist',
         btnCancelOnPress: () {},
         btnOkOnPress: () {},
       ).show();
     } else if (e.code == 'wrong-password') {
-      AwesomeDialog(
+      dialog. AwesomeDialog(
         context: context,
-        dialogType: DialogType.INFO,
-        animType: AnimType.BOTTOMSLIDE,
+        dialogType:  dialog.DialogType.info,
+        animType:  dialog.AnimType.bottomSlide,
         title: 'Attend  !',
         desc: 'The password is Wrong',
         btnOkOnPress: () {},

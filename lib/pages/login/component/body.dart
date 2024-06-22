@@ -153,8 +153,8 @@ class Body extends StatelessWidget {
               });
             },
             style: ElevatedButton.styleFrom(
-              primary: Colors.deepPurple,
-              onPrimary: Colors.white,
+              // primary: Colors.deepPurple,
+              // onPrimary: Colors.white,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
               ),
